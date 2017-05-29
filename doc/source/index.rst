@@ -148,7 +148,7 @@ exceptions, as in the cases here.
     @retry(retry=retry_if_exception_type(IOError))
     def might_io_error():
         print("Retry forever with no wait if an IOError occurs, raise any other errors")
-        retry Exception
+        raise Exception
 
 We can also use the result of the function to alter the behavior of retrying.
 
